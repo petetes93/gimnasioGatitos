@@ -1,3 +1,10 @@
 table, th, td {
     border: 1px solid black;
   }
+  .col2{
+    width: 150px;
+  }
+
+.gatitosCascadas body{
+    background-color: aqua;
+}

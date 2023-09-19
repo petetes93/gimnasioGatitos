@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gatitos/Cascadas</title>
+    <link rel="stylesheet" href="../style.css">
+  
+
+</head>
+<body>
+    <header>
+        <h2>Gatitos / Cascadas</h2>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="./gatitosCascadas.html">Gatitos</a>
+        </nav>
+    </header>
+
+
+<h1>Cascadas</h1>
+<div class="cascada">
+    <img src="../assets/cascada.jpg" alt="" width="350px">
+    <img src="../assets/cascada2.jpg" alt="" width="350px">
+    <img src="../assets/cascada4.jpg" alt="" width="350px">
+
+    <h1>Gatitos</h1>
+    <video id="miVideo" width="640" height="360" controls>
+        <source src="../assets/gatito.mp4" type="video/mp4">
+        Tu navegador no soporta el elemento de video.
+    </video>
+
+    <audio id="miAudio" controls>
+        <source src="../assets/gato purr.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script>
+        const videoElement = document.getElementById("miVideo");
+        const audioElement = document.getElementById("miAudio");
+
+        function reproducirSimultaneamente() {
+            videoElement.play();
+            audioElement.play();
+
+            setTimeout(function() {
+                audioElement.currentTime = 27;
+            }, 1000);
+        }
+
+        window.addEventListener("load", reproducirSimultaneamente);
+    </script>
+</div>
+</body>
+</html>
